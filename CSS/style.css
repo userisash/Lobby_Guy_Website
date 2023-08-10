@@ -1,0 +1,92 @@
+@font-face{
+    font-family: 'Pixeboy';
+    src: url('../Assets/pixeboy-font/Pixeboy-z8XGD.ttf');
+}
+*{
+  padding: 0;  
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.nav{
+    display: flex;
+    width: 100vw;
+    height: 90px;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+}
+.links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+}
+.link{
+    color: rgba(96, 196, 245, 0.86);
+    text-decoration: none;
+    list-style: none;
+}
+.banner{
+    width: 100vw;
+    height: 20rem;
+    object-fit: cover;
+}
+.about{
+    background-color: rgba(95, 222, 17, 0.86);
+    width: 100vw;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.hero{
+    font-family:'Pixeboy', sans-serif;
+    font-size: 50px;
+    text-align: center;
+}
+
+.description{
+    font-family:'Pixeboy', sans-serif;
+    font-size: 30px;
+    text-align:start;
+}
+.menu-button{
+    width: 100px;
+    height: 30px;
+    border: 2px solid black;
+    text-align: center;
+    position: relative;
+}
+.menu-link{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    z-index: 1;  /* optionally ensure the link stays on top */
+    position: absolute;  /* optionally position it over any other content in the button */
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+.menu-link:hover{
+    background-color: rgba(95, 222, 17, 0.86); /* Lighter shade or any color you prefer */
+    cursor: pointer;
+}
+
+.footer{
+    width: 100vw;
+    height: 200px;
+    background-color: rgba(81, 172, 229, 0.86);
+}
