@@ -9,18 +9,25 @@
 }
 
 body{
-    position: relative;
     width: 100vw;
     height: 100vh;
 }
 
-.nav{
-    display: flex;
+.header{
     width: 100vw;
-    height: 90px;
-    flex-direction: row;
+    height: 400px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 60vw;
+    height: 60px;
     position: absolute;
     top: 0;
+    left: 50%;  /* Center the navigation bar */
+    transform: translateX(-50%);  /* Adjust position based on its own width */
+    z-index: 1;
 }
 .links{
     display: flex;
@@ -30,63 +37,54 @@ body{
     width: 100%;
 }
 .link{
-    color: rgba(96, 196, 245, 0.86);
+    color: rgba(255, 255, 255, 0.90);
     text-decoration: none;
     list-style: none;
+    font-size: 25px;
+    position: relative; /* This is important for the pseudo-element to be positioned correctly */
+    padding-bottom: 5px; /* A little space for the underline */
+    overflow: hidden; /* So that the pseudo-element doesn't show outside the link's boundaries */
+}
+
+.link::before {
+    content: "";
+    position: absolute;
+    width: 0%; 
+    height: 2px; /* Height of the underline */
+    bottom: 0;
+    left: 50%;
+    background-color: rgba(255, 255, 255, 0.90); /* Color of the underline (same as the text for now) */
+    transition: all 0.3s;
+}
+
+.link:hover::before {
+    width: 100%; 
+    left: 0;
+}
+
+.logo {
+    width: 10vw;
+    height: 10vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 20px;  /* Adjust this value for desired space from the left edge */
+    z-index: 1;
 }
 .banner{
-    width: 100vw;
-    height: 20rem;
-    object-fit: cover;
-}
-.about{
-    background-color: rgba(95, 222, 17, 0.86);
-    width: 100vw;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-.hero{
-    font-family:'Pixeboy', sans-serif;
-    font-size: 50px;
-    text-align: center;
-}
-
-.description{
-    font-family:'Pixeboy', sans-serif;
-    font-size: 30px;
-    text-align:start;
-}
-.menu-button{
-    width: 100px;
-    height: 30px;
-    border: 2px solid black;
-    text-align: center;
     position: relative;
-}
-.menu-link{
     width: 100%;
     height: 100%;
-    text-decoration: none;
-    z-index: 1;  /* optionally ensure the link stays on top */
-    position: absolute;  /* optionally position it over any other content in the button */
-    top: 0;
-    left: 0;
+}
+
+
+.footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background-color 0.3s ease;
-}
-.menu-link:hover{
-    background-color: rgba(95, 222, 17, 0.86); /* Lighter shade or any color you prefer */
-    cursor: pointer;
-}
-
-.footer{
     width: 100vw;
-    height: 200px;
-    background-color: rgba(81, 172, 229, 0.86);
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.86);
+    text-align: center;
+    color: #fff;
 }
