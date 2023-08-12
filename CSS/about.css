@@ -45,21 +45,40 @@
     border: 2px solid black;
     text-align: center;
     position: relative;
+    overflow: hidden;
 }
 .menu-link{
     width: 100%;
     height: 100%;
     text-decoration: none;
-    z-index: 1; 
+    color: black;
+    background: transparent;
     position: absolute;  
     top: 0;
     left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background-color 0.3s ease;
+    transition: background-image 0.3s ease;
+    position: relative;
+    z-index: 2;
 }
+.menu-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%; /* Start off the left edge */
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, #0072ff, #00c6ff);
+    z-index: -1; /* Place the gradient behind the actual link content */
+    transition: transform 0.5s ease;
+}
+
 .menu-link:hover{
-    background-color: rgba(95, 222, 17, 0.86); 
+    /* background-image: linear-gradient(to right, #0072ff, #00c6ff); */
     cursor: pointer;
+}
+.menu-link:hover::before {
+    transform: translateX(100%); /* Move it to the right, revealing the gradient */
 }

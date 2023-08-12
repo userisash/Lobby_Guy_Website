@@ -26,6 +26,7 @@ body{
     position: absolute;
     top: 0;
     left: 50%;  /* Center the navigation bar */
+    margin-top: 50px;
     transform: translateX(-50%);  /* Adjust position based on its own width */
     z-index: 1;
 }
@@ -69,6 +70,7 @@ body{
     position: absolute;
     top: 0;
     left: 20px;  /* Adjust this value for desired space from the left edge */
+    margin-top: 50px;
     z-index: 1;
 }
 .banner{
@@ -87,4 +89,5 @@ body{
     background-color: rgba(0, 0, 0, 0.86);
     text-align: center;
     color: #fff;
+    font-size: 50px;
 }
