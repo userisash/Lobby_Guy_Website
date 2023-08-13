@@ -3,25 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d692d27f04.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="../CSS/about.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/responsive.css">
+    <title>Lobby Guy Studios</title>
 </head>
 <body>
     <!--Banner-->
     <header class="header">
-        <nav class="nav">
-            <ul class="links">
-                <a class="link" href="index.html"><li class="link">Home</li></a>
-                <a class="link" href="news.html"><li class="link">Updates</li></a>
-                <a class="link" href="Game.html"><li class="link">Games</li></a>
-                <a class="link" href="media.html"><li class="link">Media</li></a>
-            </ul>
-        </nav>
-       <a href="../HTML/index.html"><img src="../Assets/FullLogo4.png" alt="FullLogo" class="logo"></a> 
-        <img src="../Assets/Maze.png" alt="Maze Image" class="banner" id="banner">
+        <button id="menuToggle" class="hamburger-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="sidebar" id="sidebar">
+            <button id="closeSidebar" class="close-btn">
+                <i class="fas fa-times"></i>
+            </button>
+            <nav class="nav">
+                <ul class="links">
+                   <li><a class="link" href="index.html">Home</a></li> 
+                   <li><a class="link" href="news.html">Updates</a></li> 
+                   <li><a class="link" href="Game.html">Games</a></li> 
+                   <li><a class="link" href="media.html">Media</a></li> 
+                </ul>
+            </nav>
+        </div>        
+        <div class="logo-container">
+            <a href="../HTML/index.html"><img src="../Assets/FullLogo4.png" alt="FullLogo" class="logo"></a>
+        </div>
+        <div class="video-banner">
+            <video autoplay loop muted playsinline>
+                <source src="../Assets/stockfootage.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
     </header>
-    <!--About Section-->
+    <!-- About Section -->
     <section class="about">
         <div class="image-side">
             <img src="../Assets/char2d.png" alt="Description">
@@ -31,14 +49,16 @@
             <p class="description">
                 A world full of Adventures
             </p>
-            <button class="menu-button"><a class="menu-link" href="../HTML/menu.html">Play</a></button>
+          <a class="menu-link" href="../HTML/menu.html">Explore</a>
         </div>
     </section>
     
     <footer class="footer">
    
-            All Rights Reserved <br> Lobby Guy
+        &copy; All Rights Reserved <br> Lobby Guy
     
-    </footer> -->
+    </footer> 
+
+    <script src="../JS/main.js"></script>
 </body>
 </html>

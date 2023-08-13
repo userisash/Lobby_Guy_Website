@@ -1,65 +1,73 @@
+@font-face{
+    font-family: 'Pixeboy';
+    src: url('../Assets/pixeboy-font/Pixeboy-z8XGD.ttf');
+}
+
 .about {
-    display: flex;
-    height: 400px; /* or whatever height you want */
-    overflow: hidden; /* Important to hide the overflow from clip-path */
-    position: relative; 
-}
-
-.image-side, .content-side {
-    flex: 1; /* Each takes half the width */
-    height: 100%;
+    top: 0;  /* Add this. This will push the about section down by 120px */
+    display: flex; 
+    justify-content: space-between;
     position: relative;
+    width: 100vw; 
+    height: 300px;
 }
 
-/* Clip the left half (image side) to have a diagonal split */
-.image-side {
-    background: url('../Assets/char2d.png') no-repeat center center;
-    background-size: cover;
-    clip-path: polygon(0% 0%, 100% 0%, 50% 100%, 0% 100%);
-}
-
-/* Clip the right half (content side) to match the diagonal from the left half */
-.content-side {
-    clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 0% 100%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-.hero{
-    font-family:'Pixeboy', sans-serif;
-    font-size: 50px;
-    text-align: center;
-}
-
-.description{
-    font-family:'Pixeboy', sans-serif;
-    font-size: 30px;
-    text-align:start;
-}
-.menu-button{
-    width: 100px;
-    height: 30px;
-    border: 2px solid black;
-    text-align: center;
-    position: relative;
-}
-.menu-link{
+.image-side img {
     width: 100%;
     height: 100%;
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+}
+
+.content-side {
+    display: flex;
+    flex-direction: column; /* Stack the elements vertically */
+    justify-content: center; /* Center them vertically */
+    align-items: flex-start; /* Align to the left */
+    padding: 20px; /* Some padding for spacing */
+    margin-right: 30px;
+}
+
+.hero {
+    margin-bottom: 10px; /* Some space below the heading */
+    font-family:'Pixeboy', sans-serif;
+}
+
+.description {
+    margin-bottom: 20px; /* Some space above the button */
+    font-family: 'Pixeboy', sans-serif;
+    font-size: 25px;
+}
+
+.menu-link {
+    border: none;
+    padding: 10px 20px;
+    color: black;
+    text-transform: uppercase;
+    font-family: 'Pixeboy', sans-serif;
+    font-size: 15px;
+    border: 2px solid black;
+    letter-spacing: 1px;
+    cursor: pointer;
     text-decoration: none;
-    z-index: 1; 
-    position: absolute;  
+    display: inline-block;
+    position: relative;
+    overflow: hidden; /* Hide the overflow of the pseudo-element */
+    background: transparent; /* Make sure the button itself doesn't have a background */
+}
+
+.menu-link::before {
+    content: '';
+    background: linear-gradient(90deg, blue, transparent);
+    position: absolute;
     top: 0;
     left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s ease;
+    bottom: 0;
+    width: 0; /* Starts without any width */
+    transition: width 0.5s ease; /* This will animate the width */
+    z-index:0; /* Ensures the background is behind the text/content of the button */
 }
-.menu-link:hover{
-    background-color: rgba(95, 222, 17, 0.86); 
-    cursor: pointer;
+
+.menu-link:hover::before {
+    width: 100%; /* On hover, the pseudo-element's width becomes 100% of the button, revealing the gradient */
+    color:#fff;
 }
