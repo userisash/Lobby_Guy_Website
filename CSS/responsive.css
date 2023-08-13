@@ -1,0 +1,18 @@
+.hamburger-icon {
+    display: block; /* Show the hamburger icon on mobile */
+}
+
+/* Media query for larger screens (e.g., tablets, desktops) */
+@media screen and (min-width: 768px) { /* Adjust the breakpoint as required */
+    .hamburger-icon {
+        display: none; /* Hide the hamburger icon on larger screens */
+    }
+
+    .nav {
+        display: block; /* Show the sidebar on larger screens */
+    }
+    
+    .about {
+        background: linear-gradient(to bottom left, #f5f5f5 50%, #ffffff 50%);
+    }
+}
