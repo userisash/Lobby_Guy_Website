@@ -1,112 +1,86 @@
-*{
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-}
-body {
-    font-family: Arial, sans-serif;  /* Adding a default font, you can change this */
-    overflow-x: hidden;  /* Prevent horizontal scroll */
+.header {
+    width: 100%;
+    height: 370px;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    position: relative;
 }
 
-
-.hamburger-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    margin: 20px;
-    z-index: 1001; /* This ensures it's on top of the sidebar and the banner */
+.nav {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     position: absolute;
-}
-.close-btn {
-    background: none;
-    border: none;
-    color: white; /* You can change this color as you see fit */
-    font-size: 24px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    outline: none;
-}
-
-
-.sidebar {
-    position: fixed;
     top: 0;
-    left: -300px;  /* Initially keep it out of viewport */
-    width: 150px;
-    height: 100%;
-    background-color: #333;  /* Change this to your preferred background color */
-    transition: 0.3s;
-    overflow-y: auto;  /* In case content is more than viewport height */
+    left: 0;
     z-index: 1000;
 }
 
-
-.sidebar .links{
+.links {
     list-style: none;
-    margin: 50px 0px;
-    
-}
-
-.sidebar .link {
-    width: 100%;
-    display: block;
-    color: white;  /* Change this to your preferred text color */
-    text-decoration: none;
-    padding: 10px 20px;
-    margin-right: 50px;
-}
-
-.sidebar .link:hover {
-    background-color: rgba(255,255,255,0.1);  /* Slight background on hover */
-}
-.video-banner {
-    position: relative;
-    width: 100%;
-    height: 500px; /* Or whatever height you prefer */
-    overflow: hidden;  /* Hide the overflowing parts of the video */
-}
-
-.video-banner video {
     position: absolute;
-    width: auto;
-    height: 100%;
+    top: 10%;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%; 
-    min-height: 100%;
-    object-fit: cover; /* This ensures the video covers the entire container */
+    transform: translateX(-50%);
+    padding: 10px; /* Adjust padding as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    z-index: 1; /* Ensure links are on top of the video */
 }
 
+.link {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px; /* Adjust margin as needed */
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+.link i {
+    margin-right: 5px;
+}
+
+.text {
+    display: inline-block;
+    font-size: 16px;
+}
 .logo-container {
+    width: 100px;
+    height: 100px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    position: fixed; 
-    top: 0;
-    right: 0;
-    width: 30vw;
-    height: 120px;  /* Adjusted from 100vh to 120px for just the top portion of the screen */
-    z-index: 999; /* ensures it's above the banner */
+    margin-left: 20px; 
 }
 
 .logo {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 100%;
 }
 
-.footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100px;
-    background-color: rgba(0, 0, 0, 0.86);
-    text-align: center;
-    color: #fff;
-    font-size: 15px;
+.image-banner {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Set the height to 100% to cover the entire header */
+    overflow: hidden; /* Hide the overflowing parts of the video */
 }
+
+.image-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Preserve aspect ratio and cover the entire container */
+}
+/* .video-banner video {
+    position: absolute;
+    width: 100%;
+    height: 100%; 
+    left: 0;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+} */
 
