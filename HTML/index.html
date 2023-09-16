@@ -13,52 +13,62 @@
 <body>
     <!--Banner-->
     <header class="header">
-        <button id="menuToggle" class="hamburger-btn">
-            <i class="fas fa-bars"></i>
-        </button>
-        <div class="sidebar" id="sidebar">
-            <button id="closeSidebar" class="close-btn">
-                <i class="fas fa-times"></i>
-            </button>
-            <nav class="nav">
-                <ul class="links">
-                   <li><a class="link" href="index.html">Home</a></li> 
-                   <li><a class="link" href="news.html">Updates</a></li> 
-                   <li><a class="link" href="Game.html">Games</a></li> 
-                   <li><a class="link" href="media.html">Media</a></li> 
-                </ul>
-            </nav>
-        </div>        
-        <div class="logo-container">
-            <a href="../HTML/index.html"><img src="../Assets/FullLogo4.png" alt="FullLogo" class="logo"></a>
-        </div>
-        <div class="video-banner">
-            <video autoplay loop muted playsinline>
-                <source src="../Assets/stockfootage.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+        <nav class="nav">
+            <div class="logo-container">
+                <a href="../HTML/index.html"><img src="../Assets/FullLogo4.png" alt="FullLogo" class="logo"></a>
+            </div>
+            <ul class="links">
+                <li><a class="link" href="index.html"><i class="fa-solid fa-house"></i><span class="text">Home</span></a></li>
+                <li><a class="link" href="news.html"><i class="fa-solid fa-envelope"></i><span class="text">Updates</span></a></li>
+                <li><a class="link" href="Game.html"><i class="fa-solid fa-gamepad"></i><span class="text">Games</span></a></li>
+                <li><a class="link" href="media.html"><i class="fa-solid fa-phone"></i><span class="text">Contacts</span></a></li>
+            </ul>
+        </nav>
+        <div class="image-banner">
+            <img src="../Assets/banner.png" alt="banner">
         </div>
     </header>
-    <!-- About Section -->
-    <section class="about">
-        <div class="image-side">
-            <img src="../Assets/char2d.png" alt="Description">
-        </div>
-        <div class="content-side">
-            <h1 class="hero">MazeMaster</h1>
-            <p class="description">
-                A world full of Adventures
-            </p>
-          <a class="menu-link" href="../HTML/menu.html">Explore</a>
-        </div>
+    
+   <!-- About Section-->
+     <section class="about">
+            <h1>Our Games</h1>
+            <ul class="cards">
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image"><img src="../Assets/Game1.png" class="img"></div>
+                  <div class="card_content">
+                    <h2 class="card_title">Maze Master</h2>
+                    <button class="btn card_btn">Read More</button>
+                  </div>
+                </div>
+              </li>
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image"><img src="../Assets/Game2.png" class="img"></div>
+                  <div class="card_content">
+                    <h2 class="card_title">Brothers of Destruction</h2>
+                    <button class="btn card_btn">Read More</button>
+                  </div>
+                </div>
+              </li>
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image"><img src="../Assets/Game3.png" class="img"></div>
+                  <div class="card_content">
+                    <h2 class="card_title">Made Of Steel</h2>
+                    <button class="btn card_btn">Read More</button>
+                  </div>
+                </div>
+              </li>
+            </ul>
     </section>
     
-    <footer class="footer">
+ <!-- <footer class="footer">
    
         &copy; All Rights Reserved <br> Lobby Guy
     
-    </footer> 
-
+    </footer>  -->
+    <script src="https://kit.fontawesome.com/d692d27f04.js" crossorigin="anonymous"></script>
     <script src="../JS/main.js"></script>
 </body>
 </html>
