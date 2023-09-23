@@ -59,3 +59,11 @@
     border: 1px solid rgba(0, 0, 0, 0.2);
     background: transparent;
   }
+  
+  .footer{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    height: 70px;
+  }
