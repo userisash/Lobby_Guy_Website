@@ -8,7 +8,11 @@ body {
     font-family: Arial, sans-serif;
     overflow-x: hidden;
     width: 100vw;
-    height: 100vh;
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+    margin: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -59,6 +63,7 @@ body {
   .card_title {
     color: #ffffff;
     font-size: 1.1rem;
+    width: 40px;
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: capitalize;
@@ -66,9 +71,16 @@ body {
   }
 
   @media (max-width: 768px){
+      .about{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+      }
       .login{
         display: flex;
         flex-direction: column;
+        width: 100%;
+        background-color: red;
       }
       .log-img{
         width: 100%;
@@ -77,11 +89,15 @@ body {
         font-size: 30px;
       }
       .log-forms{
-        width: 100%;
+        width: 40%;
         margin-top: 10px;
+        margin-left: 100px;
       }
       .form-btn{
         margin-bottom: 10px;
+      }
+      .footer{
+        font-size: 20px;
       }
   }
   
