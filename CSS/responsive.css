@@ -64,4 +64,24 @@ body {
     text-transform: capitalize;
     margin: 0px;
   }
+
+  @media (max-width: 768px){
+      .login{
+        display: flex;
+        flex-direction: column;
+      }
+      .log-img{
+        width: 100%;
+      }
+      .log-text{
+        font-size: 30px;
+      }
+      .log-forms{
+        width: 100%;
+        margin-top: 10px;
+      }
+      .form-btn{
+        margin-bottom: 10px;
+      }
+  }
   
