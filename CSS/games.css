@@ -1,0 +1,28 @@
+.games-lists{
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: 1000px;
+    /* background-color: aqua; */
+}
+
+.title{
+    height: 50px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.list{
+    /* background-color: red; */
+    height: 25%;
+    width: 100%;
+}
+.new{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+    margin-left: 20px;
+}
