@@ -1,58 +1,72 @@
-.about{
-    width: 100%;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 0;
-    background-color: rgb(22,26,66);
-  }
-  
-  .about h1, .about h2, .about p {
-    font-size: 24px;
-    font-weight: 400;
-    text-align: center;
-    color: #fff;
+/* Basic Styling for the Section and Cards */
+
+.about {
+  width: 100%;
+  padding: 2rem 1rem;
+  text-align: center; /* center the title */
+  background-color: rgb(22,26,66);
+}
+.about h1{
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.cards {
+  display: flex; /* Use Flexbox */
+  list-style: none;
+  justify-content: center; /* Center items on the main axis */
+  flex-wrap: wrap; /* Allow items to wrap */
+  gap: 15px; 
 }
 
-  
-  .img {
-    height: auto;
-    max-width: 100%;
-    vertical-align: middle;
-  }
-  
-  .btn {
-    color: #ffffff;
-    padding: 0.8rem;
-    font-size: 14px;
-    text-transform: uppercase;
-    border-radius: 4px;
-    font-weight: 400;
-    display: block;
-    width: 100%;
-    cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background: transparent;
-  }
-  
-  .btn:hover {
-    background-color: rgba(255, 255, 255, 0.12);
-  }
-  
-  .cards {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .cards_item {
-    display: flex;
-    padding: 1rem;
-  }
+.card {
+  width: 300px; /* Fixed width for larger screens, will adapt for smaller screens */
+  height: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for better look */
+  overflow: hidden; /* In case of border-radius or other styles */
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: space-between; /* Distribute space between image and content */
+}
 
-  .card-title{
-    color: #fff;
+.card_image {
+  width: 100%; /* make the image responsive */
+  height: 250px;
+  display: block;
+}
+
+.card_content {
+  padding: 1rem;
+}
+
+.card .card_content h2.card_title{
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.btn {
+  margin-top: 1rem; /* Add some space above the button */
+}
+
+/* Responsive Styling using Media Queries */
+
+/* For screens smaller than 600px */
+@media (max-width: 600px) {
+  .card {
+      width: 100%; /* full width on small screens */
   }
+}
+
+/* For screens between 600px and 900px */
+@media (min-width: 600px) and (max-width: 900px) {
+  .about{
+    width: 100%;
+    background-color: aqua;
+  }
+  .cards{
+    width: 100%;
+  }
+  .card {
+      width: 45%; /* display 2 cards per row */
+  }
+}
+
+/* Adjustments and improvements can be made based on exact design specifications and other surrounding content. */
